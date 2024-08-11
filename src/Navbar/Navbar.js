@@ -37,7 +37,7 @@ const Navbar = ({ children }) => {
         <Flex gap={10} mx={20}>
         <Box color={"white"} display={{base: "block", md:"none"}} >
           <Link to={'/'}>
-          <Text fontSize={{base : "lg", lg:"x-large"}}>Home</Text>
+          <Text >Home</Text>
           </Link>
         </Box>
           <Link to={'/search'}>
@@ -47,7 +47,7 @@ const Navbar = ({ children }) => {
           </Link>
           <Link to={`/${authUser.username}`}>
           <Box color={"white"} fontSize={{base : "lg", lg:"x-large"}} onClick={()=> { setUserProfile(authUser)}}>
-            {authUser.username}
+            Profile
           </Box>
           </Link>
 
