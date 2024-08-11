@@ -20,7 +20,7 @@ const FeedPost = ({ book }) => {
           />
         </Flex>
 
-        <Flex direction={"column"} justifyContent={{lg: "start" , base : "center"}}>
+     
           <Flex
             display={{base :"none" , lg:"block"}}
             width={"50%"}
@@ -43,7 +43,7 @@ const FeedPost = ({ book }) => {
              {book.book.description}
             </Text>
           </Flex>
-        </Flex>
+        
       </Flex>
     </div>
   );

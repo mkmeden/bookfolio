@@ -22,16 +22,14 @@ const HomePage = () => {
       backgroundBlendMode="overlay"
     >
       <Box h={"200px"}></Box>
-      <Flex display={{ base: "block", lg: "none" }} mb={10}>
+      <Flex display={{ base: "block", md : "block", lg: "none" }} mb={10}>
         <SearchUser />
         <Box h={"50px"}></Box>
       </Flex>
-      <Flex justifyContent="center" alignItems="center">
+      <Flex justifyContent={{ base : "center", lg:"start"}} alignItems="start">
         <FeedPosts />
         <Flex
-          position={{ lg: "fixed" }}
           display={{ base: "none", md: "none", lg: "block" }}
-          right={20}
         >
           <SearchUser />
         </Flex>
