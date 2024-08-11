@@ -27,9 +27,13 @@ const HomePage = () => {
         <Box h={"50px"}></Box>
       </Flex>
       <Flex justifyContent={{ base : "center", lg:"start"}} alignItems="start">
+        <Flex >
         <FeedPosts />
+        </Flex>
         <Flex
+          position={{ lg: "fixed" }}
           display={{ base: "none", md: "none", lg: "block" }}
+          right={20}
         >
           <SearchUser />
         </Flex>

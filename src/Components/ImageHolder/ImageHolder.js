@@ -50,12 +50,12 @@ const ImageHolder = ({ details, data, src, title }) => {
           direction="column" // Stack items vertically
           alignItems="center" // Center items horizontally
         >
-          <Text>{`${details.name} ${details.type}`}</Text>
+          <Text >{`${details.name} ${details.type}`}</Text>
         </Flex>
       )}
 
       <Image src={src} onClick={onOpen} />
-      <Text width={"150px"}>{title}</Text>
+      <Text textAlign={"center"} width={"150px"}>{title}</Text>
       <Flex gap={3} justifyContent={"center"}>
         <Button
           variant="link"

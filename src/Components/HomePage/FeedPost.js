@@ -4,8 +4,8 @@ import ImageHolder from "../ImageHolder/ImageHolder";
 
 const FeedPost = ({ book }) => {
   return (
-    <div>
-      <Flex alignItems={"center"} justifyContent={"center"} gap={10}>
+    <>
+      <Flex alignItems={"center"} justifyContent={"center"} gap={10} width={"70%"}>
         <Flex
           direction={"column"}
           gap={2}
@@ -45,7 +45,7 @@ const FeedPost = ({ book }) => {
           </Flex>
         
       </Flex>
-    </div>
+    </>
   );
 };
 

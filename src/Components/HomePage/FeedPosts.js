@@ -22,7 +22,7 @@ const FeedPosts = () => {
           Your friends have no books in their collection. If you don't have any friends make some here.
         </Flex>
       )}
-      <Flex  direction={"column"}  alignItems={"start"} justifyContent={"start"} gap={10}>
+      <Flex  direction={"column"}  alignItems={{ base : "center" , md :"start"}} justifyContent={"start"} gap={10}>
         {friendsBooks.map((book) => (
           <FeedPost book={book} />
         ))}
