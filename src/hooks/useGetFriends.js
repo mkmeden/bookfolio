@@ -14,6 +14,12 @@ const useGetFriends = () => {
     const getFriends = async() => {
 
         try {
+
+          if(userProfile.friends.length===0)
+          {
+            return 
+          }
+
             const usersRef = collection(firestore, "users");
             const q = query(usersRef, where("uid", "in", userProfile.friends));
         

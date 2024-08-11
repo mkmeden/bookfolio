@@ -75,7 +75,7 @@ const useOnLike = (bookData) => {
           const bookDoc = await getDoc(bookDocRef);
           const book = {
             id: bookData.id,
-            likes: [authUser.uid],
+            likes: bookDoc.data()? [...bookDoc.data().likes , authUser.uid]:[authUser.uid],
             reads: bookDoc.data() ? bookDoc.data().reads : [],
             title: bookData.title,
             description: bookData.description ? bookData.description : "",

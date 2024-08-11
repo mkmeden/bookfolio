@@ -74,7 +74,7 @@ const useOnRead = (bookData) => {
           const book = {
             id: bookData.id,
             likes: bookDoc.data()?  bookDoc.data().likes:[] , 
-            reads: [authUser.uid],
+            reads: bookDoc.data()? [...bookDoc.data().reads , authUser.uid]:[authUser.uid],
             title: bookData.title,
             description: bookData.description?bookData.description : "",
             thumbnail: bookData.thumbnail,

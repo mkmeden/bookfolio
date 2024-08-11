@@ -61,8 +61,10 @@ const UserPage = () => {
   const [addFriend, isFriends, isLoading] = useAddFriend(currentUser.uid);
   const browseRef = useRef(null);
   const [uploadImage, uploading] = useUploadImage();
+  console.log("boombai")
 
   useEffect(() => {
+
     const fetchUserProfile = async () => {
       const q = query(
         collection(firestore, "users"),
@@ -71,6 +73,7 @@ const UserPage = () => {
       const querySnapshot = await getDocs(q);
       querySnapshot.forEach((doc) => {
         setUserProfile(doc.data());
+        localStorage.setItem('profile-info' , JSON.stringify(doc.data()))
       });
     };
     fetchUserProfile();
@@ -84,9 +87,11 @@ const UserPage = () => {
       const reads = userDoc.data().reads;
 
       const bookIdCollection = [...new Set([...likes, ...reads])];
-
+      console.log("bookidcolleciton veno", bookIdCollection)
       if (bookIdCollection.length === 0) {
         setLoading(false);
+        setBooksCollection([]);
+
         return;
       }
 
@@ -103,7 +108,7 @@ const UserPage = () => {
     };
 
     getUserBookCollection();
-  }, [username, currentUser.uid, authUser.likes, authUser.reads]);
+  }, [username, currentUser.uid, authUser.likes, authUser.reads,profileUser.uid]);
 
   return (
     <div>
