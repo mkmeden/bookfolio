@@ -52,7 +52,7 @@ const HomePage = () => {
         >
           <SearchUser />
           <Flex h={"100px"}></Flex>
-          <Button  width={"100%"} color={"black"} bg={"blue.300"} onClick={onOpen}>Suggested Users</Button>
+          <Button  width={"100%"} color={"black"} bg={"blue.300"} fontWeight={"sm"} onClick={onOpen}>Suggested Users</Button>
         </Flex>
       </Flex>
       <SuggestedUsersModal isOpen = {isOpen}  onClose= {onClose}/>
